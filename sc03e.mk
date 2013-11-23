@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/i9305
+LOCAL_PATH := device/samsung/sc03e
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -83,6 +83,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mobiledata.interfaces=pdp0,wlan0,gprs,ppp0 \
     ro.telephony.ril.v3=exynos4RadioState
 
+# Default Locale
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.locale.language=ja \
+    ro.product.locale.region=JP
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -92,4 +97,4 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/samsung/smdk4412-common/common.mk)
 $(call inherit-product, device/samsung/smdk4412-qcom-common/common.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/i9305/i9305-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/sc03e/sc03e-vendor.mk)

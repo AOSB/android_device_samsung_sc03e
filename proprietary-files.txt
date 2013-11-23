@@ -39,3 +39,29 @@ system/lib/libsecnativefeature.so
 system/lib/libsecril-client.so
 system/lib/hw/sensors.smdk4x12.so
 system/usr/keylayout/sec_touchkey.kl
+
+# font
+system/fonts/truetypeEmoji.ttf
+
+# emoji_dcm
+system/lib/libemoji_docomo.so
+
+# Felica
+system/app/FeliCaLock.apk
+system/app/FeliCaRemoteLock.apk
+system/app/FeliCaRemoteLock3LM.apk
+system/app/FeliCaTest.apk
+system/app/MobileFeliCaClient.apk
+system/app/MobileFeliCaMenuApp.apk
+system/app/MobileFeliCaMenuMainApp.apk
+system/app/MobileFeliCaSettingApp.apk
+system/app/MobileFeliCaWebPlugin.apk
+system/app/MobileFeliCaWebPluginBoot.apk
+system/bin/mfdp
+system/bin/mfsc
+system/lib/libcordon.so
+system/etc/felica/common.cfg
+system/etc/felica/mfc_falp.cfg
+system/etc/felica/mfc_push.cfg
+system/etc/felica/mfm.cfg
+system/etc/felica/mfs.cfg
