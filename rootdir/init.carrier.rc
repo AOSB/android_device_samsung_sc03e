@@ -1,0 +1,69 @@
+#on early-init
+#    export EXTERNAL_STORAGE_DOCOMO /storage/extSdCard
+
+#on early-boot
+#    exec /system/bin/sh /sbin/init.prop.sh
+
+on post-fs-data
+    # for felica
+    exec /sbin/felica_init.sh
+
+on boot
+
+# Create folder for RemoteLock service
+#    mkdir /data/system 0775 system system
+
+# FeliCa
+    mkdir /efs/FeliCaLock
+    chown system system /efs/FeliCaLock
+    chmod 0777 /efs/FeliCaLock
+
+# JPN: For MobileTV [ISDBT] \android\device\samsung\m3dcm\init.m3dcm.rc
+#    chown system system /dev/isdbt
+#    chmod 0660 /dev/isdbt
+#    chown system system /dev/s3c-tsi
+#    chmod 0660 /dev/s3c-tsi
+
+# JPN: For MobileTV [ISDBT] \android\device\samsung\m3dcm\init.m3dcm.rc
+#    mkdir /data/atsc-mh 0775 system system
+#    mkdir /data/one-seg 0775 system system
+#    chown system system /data/atsc-mh
+#    chown system system /data/one-seg
+#    chmod 0775 /data/atsc-mh
+#    chmod 0775 /data/one-seg
+
+# JPN: For MobileTV [ISDBT] \android\device\samsung\m3dcm\init.m3dcm.rc
+#service nexplayer /system/bin/nexprocess
+#    class main
+#    user system
+#    group system radio audio camera graphics inet net_bt net_bt_admin net_raw sdcard_rw
+	
+#service mobileTV /system/bin/broadcastProcessObserver
+#    class main
+#    user system
+#    group system radio audio camera graphics inet net_bt net_bt_admin net_raw sdcard_rw
+
+# remote lock
+#service init_devadmin /system/vendor/bin/init_devadmin.sh
+#     user system
+#     group system
+#     oneshot
+     
+# docomo virus scan - start daemon
+#service mfescand /system/bin/mfescand 
+#     class main
+#     socket mfescand stream 600 system system
+
+# for felica
+service mfsc /system/bin/mfsc
+    class core
+    user root
+    group system
+    oneshot
+    
+service mfdp /system/bin/mfdp
+    class core
+    user root
+    group system
+    oneshot
+# for felica end
