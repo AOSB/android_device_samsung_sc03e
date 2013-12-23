@@ -33,7 +33,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/lpm.rc:root/lpm.rc \
     $(LOCAL_PATH)/rootdir/ueventd.smdk4x12.rc:root/ueventd.smdk4x12.rc \
     $(LOCAL_PATH)/rootdir/init.carrier.rc:root/init.carrier.rc \
-    $(LOCAL_PATH)/rootdir/sbin/recovery-prepprocess:/sbin/recovery-prepprocess \
+    $(LOCAL_PATH)/rootdir/sbin/recovery-prepprocess:recovery/root/sbin/recovery-prepprocess \
     $(LOCAL_PATH)/rootdir/sbin/felica_init.sh:root/sbin/felica_init.sh
 
 # Audio
