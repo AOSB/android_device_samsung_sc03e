@@ -33,7 +33,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/lpm.rc:root/lpm.rc \
     $(LOCAL_PATH)/rootdir/ueventd.smdk4x12.rc:root/ueventd.smdk4x12.rc \
     $(LOCAL_PATH)/rootdir/init.carrier.rc:root/init.carrier.rc \
-    $(LOCAL_PATH)/rootdir/sbin/recovery-prepprocess:recovery/root/sbin/recovery-prepprocess \
     $(LOCAL_PATH)/rootdir/sbin/felica_init.sh:root/sbin/felica_init.sh
 
 # Audio
@@ -45,8 +44,8 @@ PRODUCT_PACKAGES += \
     camera.smdk4x12
 
 # GPS
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
 
 # Product specific Packages
 PRODUCT_PACKAGES += \
