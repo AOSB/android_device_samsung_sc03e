@@ -15,4 +15,13 @@
         "repository": "android_hardware_samsung",
         "target_path": "hardware/samsung"
     }
+    {
+        "account": "aojp",
+        "repository": "android_hardware_samsung",
+        "target_path": "hardware/samsung"
+    },
+    {
+        "repository": "proprietary_vendor_samsung",
+        "target_path": "vendor/samsung"
+    }
 ]
