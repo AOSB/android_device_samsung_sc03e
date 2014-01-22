@@ -13,10 +13,6 @@
         "target_path": "kernel/samsung/exynos4412dcm"
     },
     {
-        "repository": "android_hardware_samsung",
-        "target_path": "hardware/samsung"
-    },
-    {
         "account": "aojp",
         "repository": "android_hardware_samsung",
         "target_path": "hardware/samsung"
