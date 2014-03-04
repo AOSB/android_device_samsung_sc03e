@@ -19,5 +19,8 @@ persist.radio.add_power_save=1
 # System property for SIM
 persist.radio.apm_sim_not_pwdn=1
 
+# System property for number of mQANElements
+ro.ril.telephony.mqanelements=6
+
 # docomo emoji
 ro.config.libemoji=libemoji_docomo.so
